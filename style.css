@@ -1,6 +1,7 @@
 
 
 /* Estilos básicos para la hero section */
+
 .hero {
   background: url('cafe-hero.jpg') no-repeat center center/cover;
   height: 100vh;
@@ -53,4 +54,66 @@
 
 .btn:hover {
   background-color: #a87e50;
+}
+
+/*/////////////////////////////////////////////////////////*/
+.menu{
+  background-color: #a87e50;
+}
+.menu-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  font-size: 1.3rem;
+  padding-left: -2rem ;
+
+}
+.menu-img{
+  width: 8rem; 
+  height: 8rem;
+  padding-right: 0;
+}
+@media (min-width: 768px) {
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .menu-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.menu h3{
+  margin-top: 1px;
+  margin-bottom: 1px;
+
+}
+.menu p {
+  margin-top: 0px;
+}
+/*/////////////////////////////////////////////////////////*/
+.contacto{
+  background-color: #a87e50;
+}
+.contacto-redes{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.contacto-img{
+  width: 2rem; 
+  height: 2rem;
+  
+  padding-top: -10rem;
+}
+
+.contacto  h3{
+  margin-top: 1px;
+}
+
+@media (max-width: 760px) {
+  .contacto-redes{
+  display: grid;
+  grid-template-columns: 1fr;}
 }
