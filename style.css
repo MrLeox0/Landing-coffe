@@ -1,6 +1,13 @@
 
+.nav-item{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  font-size: 1.3rem;
+  padding-left: -2rem ;
+  flex-wrap: wrap;
 
-/* Estilos básicos para la hero section */
+}
 
 .hero {
   background: url('cafe-hero.jpg') no-repeat center center/cover;
@@ -24,7 +31,7 @@
 }
 
 /* Contenido */
-.hero-content {
+.hero-cont {
   position: relative;
   z-index: 1;
   max-width: 700px;
@@ -93,27 +100,32 @@
   margin-top: 0px;
 }
 /*/////////////////////////////////////////////////////////*/
-.contacto{
+
+
+
+/*/////////////////////////////////////////////////////////*/
+.footer{
   background-color: #a87e50;
 }
-.contacto-redes{
+.footer-redes{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
 
-.contacto-img{
+.footer-img{
   width: 2rem; 
   height: 2rem;
   
   padding-top: -10rem;
 }
 
-.contacto  h3{
+.footer  h3{
   margin-top: 1px;
 }
 
 @media (max-width: 760px) {
-  .contacto-redes{
+  .footer-redes{
   display: grid;
   grid-template-columns: 1fr;}
 }
+/*/////////////////////////////////////////////////////////*/
