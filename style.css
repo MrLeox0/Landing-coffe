@@ -1,131 +1,96 @@
+body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: #faf5f0;
+      color: #333;
+    }
+    /* Nav estilo elegante con animación */
+    nav {
+      background: #3b2727;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+    }
+    nav h1 {
+      font-size: 1.5rem;
+    }
+    nav .menu {
+      display: flex;
+      gap: 1.5rem;
+    }
+    nav .menu a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav .menu a:hover {
+      color: #e3c29c;
+    }
 
-.nav-item{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  font-size: 1.3rem;
-  padding-left: -2rem ;
-  flex-wrap: wrap;
-
-}
-
-.hero {
-  background: url('cafe-hero.jpg') no-repeat center center/cover;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #fff;
-  position: relative;
-}
-
-/* Fondo oscuro semi-transparente */
-.hero::after {
-  content: '';
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
- background: rgba(0, 0, 0, 0.5);
- 
-}
-
-/* Contenido */
-.hero-cont {
-  position: relative;
-  z-index: 1;
-  max-width: 700px;
-  padding: 20px;
-}
-
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 15px;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 25px;
-}
-
-.btn {
-  display: inline-block;
-  padding: 12px 30px;
-  background-color: #c49a6c;
-  color: #fff;
-  font-size: 1rem;
-  text-decoration: none;
-  border-radius: 8px;
-  transition: background 0.3s ease;
-}
-
-.btn:hover {
-  background-color: #a87e50;
-}
-
-/*/////////////////////////////////////////////////////////*/
-.menu{
-  background-color: #a87e50;
-}
-.menu-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-  font-size: 1.3rem;
-  padding-left: -2rem ;
-
-}
-.menu-img{
-  width: 8rem; 
-  height: 8rem;
-  padding-right: 0;
-}
-@media (min-width: 768px) {
-  .menu-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1024px) {
-  .menu-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-.menu h3{
-  margin-top: 1px;
-  margin-bottom: 1px;
-
-}
-.menu p {
-  margin-top: 0px;
-}
-/*/////////////////////////////////////////////////////////*/
-
-
-
-/*/////////////////////////////////////////////////////////*/
-.footer{
-  background-color: #a87e50;
-}
-.footer-redes{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.footer-img{
-  width: 2rem; 
-  height: 2rem;
-  
-  padding-top: -10rem;
-}
-
-.footer  h3{
-  margin-top: 1px;
-}
-
-@media (max-width: 760px) {
-  .footer-redes{
-  display: grid;
-  grid-template-columns: 1fr;}
-}
-/*/////////////////////////////////////////////////////////*/
+     /* Hero adaptado con imágenes de café */
+    .hero {
+      display: flex;
+      height: 350px;
+      margin-bottom: 2rem;
+    }
+    .hero .card {
+      flex: 1;
+      background-size: cover;
+      background-position: center;
+      transition: flex 0.4s ease;
+      position: relative;
+    }
+    .hero .card::after {
+      content: attr(data-text);
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      color: white;
+      font-size: 1.5rem;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+    }
+    .hero .card:hover {
+      flex: 3;
+    }
+      /* Menú estilo moderno */
+    .menu-container {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      padding: 0 1rem 2rem;
+    }
+    .menu-item {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      text-align: center;
+      padding-bottom: 1rem;
+      transition: transform 0.3s;
+    }
+    .menu-item:hover {
+      transform: translateY(-5px);
+    }
+    .menu-item img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .menu-item h3 {
+      margin: 0.5rem 0 0.2rem;
+    }
+    .menu-item p {
+      margin: 0.2rem 0;
+      color: #666;
+    }
+    .price {
+      font-weight: bold;
+      color: #4b2e2e;
+    }
