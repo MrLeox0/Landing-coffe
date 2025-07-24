@@ -1,14 +1,20 @@
-html{
+/* ================== RESET & BASE ================== */
+html {
   scroll-behavior: smooth;
 }
-    
+
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, sans-serif;
   background: #faf5f0;
   color: #333;
 }
-/* Nav estilo elegante con animación */
+
+/* ================== HEADER & NAV ================== */
+header {
+  position: relative;
+  z-index: 1001; /* encima de cards */
+}
 nav {
   background: #3b2727;
   color: white;
@@ -18,149 +24,13 @@ nav {
   align-items: center;
   position: sticky;
   top: 0;
-    }
+}
 
 nav h1 {
   font-size: 1.5rem;
 }
 
-     /* Hero */
-    .hero {
-      display: flex;
-      height: 350px;
-      margin-bottom: 2rem;
-       
-    }
-    
-
-    .hero .card {
-      flex: 1;
-      background-size: cover;
-      background-position: center;
-      transition: flex 0.4s ease;
-      position: relative;
-    }
-    .hero .card::after {
-      content: attr(data-text);
-      position: absolute;
-      bottom: 20px;
-      left: 20px;
-      color: white;
-      font-size: 1.5rem;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
-    }
-    .hero .card:hover {
-      flex: 3;
-    }
-      /* Menú estilo moderno */
-
-    .menu-title{
-      text-align: center;
-      font-size: 2.5rem;
-      margin-top: 1rem;
-      margin-bottom: .5rem;
-    }
-    .menu-container {
-      max-width: 1200px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-      padding: 0 1rem 2rem;
-    }
-    .menu-item {
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      overflow: hidden;
-      text-align: center;
-      padding-bottom: 1rem;
-      transition: transform 0.3s;
-    }
-    .menu-item:hover {
-      transform: translateY(-5px);
-    }
-    .menu-item img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
-    .menu-item h3 {
-      margin: 0.5rem 0 0.2rem;
-    }
-    .menu-item p {
-      margin: 0.2rem 0;
-      color: #666;
-    }
-    .price {
-      font-weight: bold;
-      color: #4b2e2e;
-    }
-
-       /*  Contacto */
-    .contacto{
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      overflow: hidden;
-      text-align: center;
-      padding-bottom: 1rem;
-      transition: transform 0.3s;
-      text-align: center;
-    }
-    .contacto h3{
-      font-size: 2.5rem;
-      margin-top: 1rem;
-      margin-bottom: .5rem;
-    }
-      .cont-tex {
-      font-weight: bold;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s;
-      margin-bottom: .5rem;
-    }
-    .cont-tex a {
-      color: inherit;           
-      text-decoration: none; 
-    }
-
-    .cont-tex :hover {
-      font-size: 1.2rem;
-      color: rgb(48, 48, 48);
-    }
-       /*  Footer */
-       
-    footer{
-     background: #201a1a;
-      color: white;
-      padding: 1rem 2rem;
-      justify-content: space-between;
-      align-items: center;
-            
-    }
-    .footer-container{
-      text-align: end;
-      max-width: 250px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(25px, 1fr));
-      gap: 1.5rem;
-      
-    }
-
-    .footer-item:hover {
-      transform: translateY(-5px);
-      
-    }
-
-    footer h3, p{
-      text-align: center;
-      margin: 0;
-    }
-
-
-    .nav-links {
+.nav-links {
   list-style: none;
   display: flex;
   gap: 20px;
@@ -172,7 +42,7 @@ nav h1 {
   font-size: 1rem;
 }
 
-/* Hamburguesa */
+/* ================== HAMBURGER MENU ================== */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -187,32 +57,6 @@ nav h1 {
   transition: 0.3s;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .hamburger {
-    display: flex;
-  }
-
-  .nav-links {
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background-color: #333;
-    flex-direction: column;
-    width: 200px;
-    display: none;
-    padding: 20px;
-  }
-
-  .nav-links li {
-    margin: 15px 0;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-}
-
 /* Animación del ícono */
 .hamburger.open span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
@@ -224,4 +68,178 @@ nav h1 {
 
 .hamburger.open span:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ================== HERO SECTION ================== */
+.hero {
+  display: flex;
+  height: 350px;
+  margin-bottom: 2rem;
+}
+
+.hero .card {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  transition: flex 0.4s ease;
+  position: relative;
+}
+
+.hero .card::after {
+  content: attr(data-text);
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  font-size: 1.5rem;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+}
+
+.hero .card:hover {
+  flex: 3;
+}
+
+/* ================== MENU SECTION ================== */
+.menu-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-top: 1rem;
+  margin-bottom: .5rem;
+}
+
+.menu-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 0 1rem 2rem;
+}
+
+.menu-item {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  text-align: center;
+  padding-bottom: 1rem;
+  transition: transform 0.3s;
+}
+
+.menu-item:hover {
+  transform: translateY(-5px);
+}
+
+.menu-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.menu-item h3 {
+  margin: 0.5rem 0 0.2rem;
+}
+
+.menu-item p {
+  margin: 0.2rem 0;
+  color: #666;
+}
+
+.price {
+  font-weight: bold;
+  color: #4b2e2e;
+}
+
+/* ================== CONTACT SECTION ================== */
+.contacto {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  text-align: center;
+  padding-bottom: 1rem;
+  transition: transform 0.3s;
+}
+
+.contacto h3 {
+  font-size: 2.5rem;
+  margin-top: 1rem;
+  margin-bottom: .5rem;
+}
+
+.cont-tex {
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s;
+  margin-bottom: .5rem;
+}
+
+.cont-tex a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.cont-tex :hover {
+  font-size: 1.2rem;
+  color: rgb(48, 48, 48);
+}
+
+/* ================== FOOTER ================== */
+footer {
+  background: #201a1a;
+  color: white;
+  padding: 1rem 2rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-container {
+  text-align: end;
+  max-width: 250px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25px, 1fr));
+  gap: 1.5rem;
+}
+
+.footer-item:hover {
+  transform: translateY(-5px);
+}
+
+footer h3, p {
+  text-align: center;
+  margin: 0;
+}
+
+/* ================== RESPONSIVE ================== */
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 70%;
+    background-color: rgba(59, 39, 39, 0.97);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 2000;
+  }
+    .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+  }
+  .nav-links.active {
+    display: flex;
+    transform: translateX(0);
+  }
+  body.menu-open {
+    overflow: hidden;
+  }
 }
