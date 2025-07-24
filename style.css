@@ -41,7 +41,8 @@
       margin-bottom: 2rem;
        
     }
-    @media (max-width: 768px).hero{}
+    
+
     .hero .card {
       flex: 1;
       background-size: cover;
