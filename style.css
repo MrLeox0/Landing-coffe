@@ -39,7 +39,9 @@
       display: flex;
       height: 350px;
       margin-bottom: 2rem;
+       
     }
+    @media (max-width: 768px).hero{}
     .hero .card {
       flex: 1;
       background-size: cover;
@@ -60,6 +62,12 @@
       flex: 3;
     }
       /* Menú estilo moderno */
+
+    .menu-title{
+      text-align: center;
+      margin: 2;
+      font-size: 2rem;
+    }
     .menu-container {
       max-width: 1200px;
       margin: auto;
